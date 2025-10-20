@@ -3,9 +3,13 @@
    <description></description>
    <name>web-service-tests</name>
    <tag></tag>
-   <UUID>4944de0d-f865-41c5-8f26-b7e143c3a65a</UUID>
+   <UUID>33e2123a-9c33-4e7f-93c4-6db7bde30fdc</UUID>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedVersion>10.3.1</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>/Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/web-service-tests.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
@@ -24,5 +28,6 @@
          </systemFolderConfiguration>
       </systemFolderList>
    </sourceContent>
+   <timeStampInProperties>true</timeStampInProperties>
    <type>WEBSERVICE</type>
 </Project>
