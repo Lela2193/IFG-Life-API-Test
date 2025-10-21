@@ -5,3 +5,4 @@ Library/
 # Cloud storage or trash
 Library/CloudStorage/
 .Trash/
+/bin/
