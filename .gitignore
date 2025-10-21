@@ -1,18 +1,7 @@
-.gradle
+# macOS system files
+.DS_Store
+Library/
 
-bin
-
-Reports
-
-Libs
-
-output
-
-!output/.gitkeep
-build
-
-.classpath
-
-.project
-
-.cache
+# Cloud storage or trash
+Library/CloudStorage/
+.Trash/

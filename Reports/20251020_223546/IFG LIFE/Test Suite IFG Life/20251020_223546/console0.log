@@ -1,0 +1,263 @@
+2025-10-20 22:35:50.751 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/IFG LIFE/Test Suite IFG Life
+2025-10-20 22:35:50.862 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Lela Sianturi
+2025-10-20 22:35:50.863 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = web-service-tests
+2025-10-20 22:35:50.864 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = lelabrsianturi - 192.168.1.3
+2025-10-20 22:35:50.865 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Mac OS X 64bit
+2025-10-20 22:35:50.867 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.1.3
+2025-10-20 22:35:50.868 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.1.0
+2025-10-20 22:35:51.592 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:51.592 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC02_GET USER
+2025-10-20 22:35:51.716 DEBUG testcase.TC02_GET USER                   - 1: sendRequest(findTestObject("IFG LIFE/GetUser"))
+2025-10-20 22:35:53.287 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/GetUser_0.har
+2025-10-20 22:35:53.420 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC02_GET USER
+2025-10-20 22:35:53.430 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:53.430 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC04_DeleteUSer
+2025-10-20 22:35:53.544 DEBUG testcase.TC04_DeleteUSer                 - 1: println("Starting IFG LIFE Test Case: TC04_DeleteUser")
+Starting IFG LIFE Test Case: TC04_DeleteUser
+2025-10-20 22:35:53.551 DEBUG testcase.TC04_DeleteUSer                 - 2: response = sendRequest(findTestObject("IFG LIFE/Delete User"))
+2025-10-20 22:35:53.770 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Delete-User_1.har
+2025-10-20 22:35:53.779 DEBUG testcase.TC04_DeleteUSer                 - 3: status = response.getStatusCode()
+2025-10-20 22:35:53.794 DEBUG testcase.TC04_DeleteUSer                 - 4: body = response.getResponseBodyContent()
+2025-10-20 22:35:53.799 DEBUG testcase.TC04_DeleteUSer                 - 5: println(Response status code: $status)
+Response status code: 204
+2025-10-20 22:35:53.852 DEBUG testcase.TC04_DeleteUSer                 - 6: println("Response body: ")
+Response body: 
+2025-10-20 22:35:53.857 DEBUG testcase.TC04_DeleteUSer                 - 7: verifyResponseStatusCode(response, 204)
+2025-10-20 22:35:53.883 DEBUG testcase.TC04_DeleteUSer                 - 8: assert body == null || trim().isEmpty()
+2025-10-20 22:35:53.888 DEBUG testcase.TC04_DeleteUSer                 - 9: println([IFG LIFE] DeleteUser test passed successfully with status $status)
+[IFG LIFE] DeleteUser test passed successfully with status 204
+2025-10-20 22:35:53.893 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC04_DeleteUSer
+2025-10-20 22:35:53.898 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:53.898 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:53.986 DEBUG testcase.TC01_CreatUser                  - 1: response = sendRequest(findTestObject("IFG LIFE/Creat User"))
+2025-10-20 22:35:54.233 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Creat-User_2.har
+2025-10-20 22:35:54.244 DEBUG testcase.TC01_CreatUser                  - 2: status = response.getStatusCode()
+2025-10-20 22:35:54.250 DEBUG testcase.TC01_CreatUser                  - 3: println(Actual status code: $status)
+Actual status code: 401
+2025-10-20 22:35:54.256 DEBUG testcase.TC01_CreatUser                  - 4: assert status == 200 || status == 201
+2025-10-20 22:35:54.279 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.294 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.300 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.304 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:54.305 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.333 DEBUG testcase.TC01_CreatUser                  - 1: response = sendRequest(findTestObject("IFG LIFE/Creat User"))
+2025-10-20 22:35:54.577 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Creat-User_3.har
+2025-10-20 22:35:54.581 DEBUG testcase.TC01_CreatUser                  - 2: status = response.getStatusCode()
+2025-10-20 22:35:54.583 DEBUG testcase.TC01_CreatUser                  - 3: println(Actual status code: $status)
+Actual status code: 401
+2025-10-20 22:35:54.586 DEBUG testcase.TC01_CreatUser                  - 4: assert status == 200 || status == 201
+2025-10-20 22:35:54.588 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.594 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.598 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.604 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:54.605 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.632 DEBUG testcase.TC01_CreatUser                  - 1: response = sendRequest(findTestObject("IFG LIFE/Creat User"))
+2025-10-20 22:35:54.854 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Creat-User_4.har
+2025-10-20 22:35:54.857 DEBUG testcase.TC01_CreatUser                  - 2: status = response.getStatusCode()
+2025-10-20 22:35:54.860 DEBUG testcase.TC01_CreatUser                  - 3: println(Actual status code: $status)
+Actual status code: 401
+2025-10-20 22:35:54.861 DEBUG testcase.TC01_CreatUser                  - 4: assert status == 200 || status == 201
+2025-10-20 22:35:54.862 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.865 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:54.868 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.872 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:54.872 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:54.887 DEBUG testcase.TC01_CreatUser                  - 1: response = sendRequest(findTestObject("IFG LIFE/Creat User"))
+2025-10-20 22:35:55.111 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Creat-User_5.har
+2025-10-20 22:35:55.114 DEBUG testcase.TC01_CreatUser                  - 2: status = response.getStatusCode()
+2025-10-20 22:35:55.116 DEBUG testcase.TC01_CreatUser                  - 3: println(Actual status code: $status)
+Actual status code: 401
+2025-10-20 22:35:55.118 DEBUG testcase.TC01_CreatUser                  - 4: assert status == 200 || status == 201
+2025-10-20 22:35:55.119 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:55.122 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/IFG LIFE/TC01_CreatUser FAILED.
+Reason:
+java.lang.AssertionError: Unexpected status code: 401. Expression: ((status == 200) || (status == 201)). Values: status = 401, status = 401
+	at TC01_CreatUser.run(TC01_CreatUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:406)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1760974546664.run(TempTestSuite1760974546664.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-10-20 22:35:55.126 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC01_CreatUser
+2025-10-20 22:35:55.132 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-10-20 22:35:55.132 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/IFG LIFE/TC03_UpdateUser
+2025-10-20 22:35:55.278 DEBUG testcase.TC03_UpdateUser                 - 1: println("Starting IFG LIFE Test Case: TC03_UpdateUser")
+Starting IFG LIFE Test Case: TC03_UpdateUser
+2025-10-20 22:35:55.281 DEBUG testcase.TC03_UpdateUser                 - 2: response = sendRequest(findTestObject("IFG LIFE/Update user"))
+2025-10-20 22:35:55.514 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: /Users/lelabrsianturi/Katalon Studio/IFG - Test Katalon/Reports/20251020_223546/IFG LIFE/Test Suite IFG Life/20251020_223546/requests/main/Update-user_6.har
+2025-10-20 22:35:55.520 DEBUG testcase.TC03_UpdateUser                 - 3: status = response.getStatusCode()
+2025-10-20 22:35:55.525 DEBUG testcase.TC03_UpdateUser                 - 4: body = response.getResponseBodyContent()
+2025-10-20 22:35:55.529 DEBUG testcase.TC03_UpdateUser                 - 5: println(Response status code: $status)
+Response status code: 200
+2025-10-20 22:35:55.533 DEBUG testcase.TC03_UpdateUser                 - 6: println("Response body: " + body)
+Response body: {"name":"lela","job":"QA","updatedAt":"2025-10-20T15:35:55.418Z"}
+2025-10-20 22:35:55.537 DEBUG testcase.TC03_UpdateUser                 - 7: verifyResponseStatusCode(response, 200)
+2025-10-20 22:35:55.546 DEBUG testcase.TC03_UpdateUser                 - 8: jsonResponse = JsonSlurper().parseText(body)
+2025-10-20 22:35:55.565 DEBUG testcase.TC03_UpdateUser                 - 9: assert jsonResponse.containsKey("updatedAt") : "Response doesn't contain 'updatedAt' field"
+2025-10-20 22:35:55.574 DEBUG testcase.TC03_UpdateUser                 - 10: println(Actual name returned: $jsonResponse.name)
+Actual name returned: lela
+2025-10-20 22:35:55.577 DEBUG testcase.TC03_UpdateUser                 - 11: println(Actual job returned: $jsonResponse.job)
+Actual job returned: QA
+2025-10-20 22:35:55.580 DEBUG testcase.TC03_UpdateUser                 - 12: assert name != null && job != null : "Response missing name/job"
+2025-10-20 22:35:55.583 DEBUG testcase.TC03_UpdateUser                 - 13: println([IFG LIFE] UpdateUser test passed successfully with status $status)
+[IFG LIFE] UpdateUser test passed successfully with status 200
+2025-10-20 22:35:55.587 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/IFG LIFE/TC03_UpdateUser
+2025-10-20 22:35:55.646 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-10-20 22:35:55.646 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/IFG LIFE/Test Suite IFG Life
+2025-10-20 22:35:55.646 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

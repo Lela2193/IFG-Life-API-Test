@@ -1,0 +1,39 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test Suite IFG Life,,,,20-10-2025 22:35:50,20-10-2025 22:35:55,4.805s,FAILED
+,,,,,,,
+Start listener action : sampleBeforeTestSuite,,,,20-10-2025 22:35:50,20-10-2025 22:35:51,0.148s,PASSED
+,,,,,,,
+Test Cases/IFG LIFE/TC02_GET USER,,,,20-10-2025 22:35:51,20-10-2025 22:35:53,1.829s,PASSED
+"sendRequest(findTestObject(""IFG LIFE/GetUser""))",,,,20-10-2025 22:35:51,20-10-2025 22:35:53,1.700s,PASSED
+,,,,,,,
+Test Cases/IFG LIFE/TC04_DeleteUSer,,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.463s,PASSED
+"println(""Starting IFG LIFE Test Case: TC04_DeleteUser"")",,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.008s,PASSED
+"response = sendRequest(findTestObject(""IFG LIFE/Delete User""))",,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.226s,PASSED
+status = response.getStatusCode(),,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.015s,PASSED
+body = response.getResponseBodyContent(),,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.004s,PASSED
+println(Response status code: $status),,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.052s,PASSED
+"println(""Response body: "")",,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.004s,PASSED
+"verifyResponseStatusCode(response, 204)",,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.024s,PASSED
+assert body == null || trim().isEmpty(),,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.004s,PASSED
+println([IFG LIFE] DeleteUser test passed successfully with status $status),,,,20-10-2025 22:35:53,20-10-2025 22:35:53,0.002s,PASSED
+,,,,,,,
+Test Cases/IFG LIFE/TC01_CreatUser,,,,20-10-2025 22:35:54,20-10-2025 22:35:55,0.255s,FAILED
+"response = sendRequest(findTestObject(""IFG LIFE/Creat User""))",,,,20-10-2025 22:35:54,20-10-2025 22:35:55,0.228s,PASSED
+status = response.getStatusCode(),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.001s,PASSED
+println(Actual status code: $status),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.001s,PASSED
+assert status == 200 || status == 201,,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.003s,FAILED
+,,,,,,,
+Test Cases/IFG LIFE/TC03_UpdateUser,,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.456s,PASSED
+"println(""Starting IFG LIFE Test Case: TC03_UpdateUser"")",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.003s,PASSED
+"response = sendRequest(findTestObject(""IFG LIFE/Update user""))",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.239s,PASSED
+status = response.getStatusCode(),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.005s,PASSED
+body = response.getResponseBodyContent(),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.003s,PASSED
+println(Response status code: $status),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.003s,PASSED
+"println(""Response body: "" + body)",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.004s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.008s,PASSED
+jsonResponse = JsonSlurper().parseText(body),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.018s,PASSED
+"assert jsonResponse.containsKey(""updatedAt"") : ""Response doesn't contain 'updatedAt' field""",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.009s,PASSED
+println(Actual name returned: $jsonResponse.name),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.002s,PASSED
+println(Actual job returned: $jsonResponse.job),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.002s,PASSED
+"assert name != null && job != null : ""Response missing name/job""",,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.003s,PASSED
+println([IFG LIFE] UpdateUser test passed successfully with status $status),,,,20-10-2025 22:35:55,20-10-2025 22:35:55,0.002s,PASSED
